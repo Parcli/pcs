@@ -163,7 +163,11 @@ body {
   background-color: #224D8A;
 }
 
-
+p {
+  word-wrap: break-word;
+  padding: 1em:
+  font-size: 1rem:
+}
 
 
 
