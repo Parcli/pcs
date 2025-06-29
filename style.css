@@ -224,6 +224,9 @@ body {
   background: #000 !important;
 }
 
+.nav-links a.btn:hover {
+  background: #B89000 !important; /* or any hover color you like */
+}
 
 
 
