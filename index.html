@@ -7,69 +7,6 @@
     <link rel="icon" href="https://i.ibb.co/kgCqBkw8/Untitled-13-April-2025-at-11-09-255555.png" type="image/png">
     <link href="style.css" rel="stylesheet" />
     <link href="https://fonts.googleapis.com/css?family=Roboto:400,300,500,100" rel="stylesheet" type="text/css">
-
-    <style>
-      /* Only nav-specific styling added here */
-      .nav {
-        background-color: #333;
-      }
-
-      .nav .nav-inner {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        position: relative;
-      }
-
-      .nav-links {
-        list-style: none;
-        display: flex;
-        gap: 15px;
-        margin: 0;
-        padding: 0;
-      }
-
-      .nav-links a {
-        color: white;
-        text-decoration: none;
-        padding: 8px 12px;
-        background-color: #444;
-        border-radius: 4px;
-      }
-
-      .menu-icon {
-        display: none;
-        font-size: 28px;
-        color: white;
-        cursor: pointer;
-      }
-
-      #menu-toggle {
-        display: none;
-      }
-
-      @media (max-width: 768px) {
-        .menu-icon {
-          display: block;
-        }
-
-        .nav-links {
-          display: none;
-          flex-direction: column;
-          background-color: #444;
-          position: absolute;
-          top: 60px;
-          left: 0;
-          width: 100%;
-          padding: 10px 0;
-          z-index: 10;
-        }
-
-        #menu-toggle:checked + label + .nav-links {
-          display: flex;
-        }
-      }
-    </style>
   </head>
   <body>
     <div class="header">
