@@ -64,8 +64,8 @@ body {
 }
 
 .btn:hover {
-  background: #B89000;
-  cursor: pointer;
+  background: #B89000 !important;
+  cursor: pointer !important;
 }
 
 /* Navigation */
