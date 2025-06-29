@@ -159,10 +159,9 @@ body {
   background-color: #224D8A;
 }
 
-/* Basic nav styling */
+/* Base nav layout */
 .nav {
-  background-color: #333;
-  padding: 10px 0;
+  background: #333;
   color: white;
 }
 
@@ -171,24 +170,27 @@ body {
   align-items: center;
   justify-content: space-between;
   position: relative;
+  padding: 10px 20px;
 }
 
+/* Nav links default (desktop) */
 .nav-links {
-  list-style: none;
   display: flex;
   gap: 15px;
-  margin: 0;
+  list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .nav-links a {
   color: white;
   text-decoration: none;
   padding: 8px 12px;
+  background: #444;
   border-radius: 4px;
 }
 
-/* Hide the checkbox */
+/* Hamburger toggle hidden by default */
 #menu-toggle {
   display: none;
 }
@@ -198,9 +200,10 @@ body {
   display: none;
   font-size: 28px;
   cursor: pointer;
+  user-select: none;
 }
 
-/* Mobile styles */
+/* Responsive styles */
 @media (max-width: 768px) {
   .menu-icon {
     display: block;
@@ -209,7 +212,7 @@ body {
   .nav-links {
     display: none;
     flex-direction: column;
-    background-color: #444;
+    background: #444;
     position: absolute;
     top: 50px;
     left: 0;
@@ -221,6 +224,7 @@ body {
     display: flex;
   }
 }
+
 
 
 
