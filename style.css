@@ -190,40 +190,7 @@ body {
   border-radius: 4px;
 }
 
-/* Hamburger toggle hidden by default */
-#menu-toggle {
-  display: none;
-}
 
-/* Hamburger icon */
-.menu-icon {
-  display: none;
-  font-size: 28px;
-  cursor: pointer;
-  user-select: none;
-}
-
-/* Responsive styles */
-@media (max-width: 768px) {
-  .menu-icon {
-    display: block;
-  }
-
-  .nav-links {
-    display: none;
-    flex-direction: column;
-    background: #444;
-    position: absolute;
-    top: 50px;
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-  }
-
-  #menu-toggle:checked + .menu-icon + .nav-links {
-    display: flex;
-  }
-}
 
 
 
