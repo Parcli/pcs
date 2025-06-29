@@ -228,6 +228,20 @@ body {
   background: #B89000 !important; /* or any hover color you like */
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    opacity: 0;
+    transform: translateY(-20px);
+    pointer-events: none;
+    transition: opacity 0.3s ease, transform 0.3s ease;
+  }
+
+  #menu-toggle:checked + label + .nav-links {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+  }
+}
 
 
 
