@@ -1,3 +1,4 @@
+/* Reset + Base Styles */
 html, body {
   margin: 0;
   padding: 0;
@@ -7,20 +8,23 @@ body {
   font-family: 'Geneva', sans-serif;
   font-weight: 300;
   zoom: 115%;
+  background: #fff;
+  color: #000;
 }
 
-/* Original main container - layout only */
+/* Containers */
 .container {
   margin: 0 auto;
-  max-width: 1000px; 
+  max-width: 1000px;
   padding: 0 10px;
 }
 
+/* Header */
 .header {
-  background: url(https://i.ibb.co/Xr3nt11c/Untitled-13-April-2025-at-11-41-49.png) no-repeat center center; 
+  background: url(https://i.ibb.co/Xr3nt11c/Untitled-13-April-2025-at-11-41-49.png) no-repeat center center;
   background-size: cover;
   height: 800px;
-  text-align: center; 
+  text-align: center;
 }
 
 .header .container {
@@ -30,85 +34,122 @@ body {
 
 .header h1 {
   color: #fff;
-  line-height: 100px; 
+  line-height: 100px;
   font-size: 80px;
   margin-top: 0;
   margin-bottom: 80px;
-  text-transform: uppercase; 
+  text-transform: uppercase;
 }
 
-@media (min-width:850px) {
+.header .btn {
+  font-weight: 500;
+  text-transform: uppercase;
+}
+
+@media (min-width: 850px) {
   .header h1 {
     font-size: 120px;
   }
 }
 
-.header p {
-  color: #fff;
-  font-weight: 500;
-  letter-spacing: 8px;
-  margin-bottom: 40px;
-  margin-top: 0;
-  text-transform: uppercase; 
-}
-
+/* Buttons */
 .btn {
   color: #fff;
   background: #000;
   padding: 10px 40px;
-  text-decoration: none; 
-  transition: background .5s;
-  border-radius: 15px;  
+  text-decoration: none;
+  transition: background 0.5s;
+  border-radius: 15px;
+  display: inline-block;
 }
 
-.btn:hover, 
-.nav ul li:hover {
+.btn:hover {
   background: #B89000;
-  cursor: pointer; 
-  transition: background .5s;
+  cursor: pointer;
 }
 
-/* NAVIGATION */
-
-.nav { 
+/* Navigation */
+.nav {
   background: #171717;
-  height: 80px; 
   width: 100%;
+  position: relative;
 }
 
-/* Keep your original nav ul and li styles */
-.nav ul {
-  height: 80px;
-  list-style: none;
-  margin: 0 auto; 
-  padding: 0;
-  display: flex;              /* Add flex for horizontal nav */
-  justify-content: center;    /* Center the nav buttons */
+.nav-container {
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  gap: 10px;                 /* space between buttons */
+  position: relative;
+  padding: 10px 20px;
 }
 
-.nav ul li {
-  color: #171717;
-  /* display: inline-block;  <-- remove to use flex */
-  height: 80px;
-  line-height: 80px; 
-  padding: 0 10px;
-  list-style: none;
-  transition: background .5s; 
+/* Hide checkbox */
+#menu-toggle {
+  display: none;
 }
 
-.nav ul li a {
+/* Hamburger icon */
+.menu-icon {
+  display: none;
+  font-size: 28px;
   color: white;
-  display: block;
+  cursor: pointer;
+}
+
+/* Nav links */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 15px;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-links li {
+  line-height: 1;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
   padding: 8px 12px;
   background: #444;
-  border-radius: 4px;
-  text-decoration: none;
+  border-radius: 8px;
+  display: block;
 }
 
-/* MAIN CONTENT */
+.nav-links a:hover {
+  background: #B89000;
+}
 
+/* Responsive Nav */
+@media (max-width: 768px) {
+  .menu-icon {
+    display: block;
+  }
+
+  .nav-links {
+    display: none;
+    flex-direction: column;
+    background-color: #444;
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 0;
+  }
+
+  #menu-toggle:checked + .menu-icon + .nav-links {
+    display: flex;
+  }
+
+  .nav-links li {
+    padding: 10px 20px;
+  }
+}
+
+/* Main Section */
 .main .container {
   margin: 80px auto;
 }
@@ -116,13 +157,16 @@ body {
 .main img {
   float: left;
   margin: 50px 80px 50px 0;
+  max-width: 100%;
+  height: auto;
 }
 
+/* Jumbotron */
 .jumbotron {
-  background-position: center center;
   background-size: cover;
   height: 600px;
-  border-radius: 25px; 
+  border-radius: 25px;
+  background-color: #224D8A;
 }
 
 .jumbotron .container {
@@ -131,32 +175,34 @@ body {
 
 .jumbotron h2 {
   color: #fff;
-  text-align: right; 
+  text-align: right;
 }
 
 .jumbotron img {
-  border-radius: 25px; 
+  border-radius: 25px;
 }
 
 .jumbotron .btn {
   margin: 10px 0 0;
-  float: right; 
+  float: right;
 }
 
-.footer { 
+/* Footer */
+.footer {
   background: #171717;
-  height: 80px; 
+  height: 80px;
   padding-bottom: 50px;
 }
 
-.footer p { 
+.footer p {
   color: #fff;
-  font-size: 14px;  
-  height: 80px; 
+  font-size: 14px;
+  height: 80px;
   line-height: 80px;
-  margin: 0;  
+  margin: 0;
 }
 
+/* Mobile Adjustments */
 @media (max-width: 500px) {
   .header h1 {
     font-size: 50px;
@@ -170,63 +216,7 @@ body {
   .main img {
     width: 100%;
     float: none;
-    margin: 0 0 20px 0;
-  }
-  
-  .jumbotron {
-    background-color: #224D8A;
-  }
-}
-
-/* MOBILE NAVIGATION */
-
-#menu-toggle {
-  display: none;
-}
-
-.menu-icon {
-  display: none;
-  font-size: 28px;
-  color: white;
-  cursor: pointer;
-  user-select: none;
-  -webkit-tap-highlight-color: transparent;
-}
-
-/* Show hamburger on small screens */
-@media (max-width: 768px) {
-  /* Hide the nav buttons by default */
-  .nav ul {
-    display: none;
-    flex-direction: column;
-    background: #444;
-    position: absolute;
-    top: 80px; /* height of nav */
-    left: 0;
-    width: 100%;
-    padding: 10px 0;
-    margin: 0;
-    z-index: 10;
-  }
-  
-  /* Show hamburger icon */
-  .menu-icon {
-    display: block;
-    position: absolute;
-    right: 20px;
-    top: 25px;
-  }
-  
-  /* Show nav menu when checkbox is checked */
-  #menu-toggle:checked + .menu-icon + ul {
-    display: flex;
-  }
-  
-  /* Style nav links vertically */
-  .nav ul li {
-    height: auto;
-    line-height: normal;
-    padding: 12px 20px;
+    margin: 20px 0;
   }
 }
 
