@@ -225,7 +225,42 @@ body {
 }
 
 .nav-links a.btn:hover {
-  background: #B89000 !important; /* or any hover color you like */
+  background: #B89000 !important; 
+
+/* Dropdown styles */
+.dropdown {
+  position: relative;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 160px;
+  z-index: 1;
+  top: 100%;
+  left: 0;
+  border-radius: 6px;
+}
+
+.dropdown-content li {
+  display: block;
+}
+
+.dropdown-content a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  background-color: #444;
+}
+
+.dropdown-content a:hover {
+  background-color: #B89000;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
 }
 
 
