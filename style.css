@@ -258,6 +258,7 @@ body {
   z-index: 999;
   min-width: 160px;
   flex-direction: column;
+  background: #000;
 }
 
 /* Links in dropdown */
@@ -265,6 +266,7 @@ body {
   color: white;
   padding: 8px 12px;
   text-decoration: none;
+  background: #000;
   display: block;
   border-radius: 4px;
 }
@@ -301,15 +303,7 @@ body {
   }
 }
 
-@media (min-width: 769px) {
-  .dropdown-menu li a {
-    background: #444;
-  }
 
-@media (max-width: 768px) {  
-  .dropdown-menu li a {
-    background: #000;
-  }
 
 
 
