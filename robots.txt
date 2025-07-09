@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://parcli.github.io/pcs/sitemap.html
+Sitemap: https://parcli.github.io/pcs/sitemap.xml.txt
